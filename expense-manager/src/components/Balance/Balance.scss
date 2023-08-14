@@ -1,0 +1,28 @@
+.balance {
+  width: 78%;
+  height: 170px;
+  border: 2px dotted black;
+  border-radius: 20px;
+  margin: 2px;
+  position: absolute;
+  top: 80px;
+  left: 18px;
+  padding: 20px;
+  background-color: white;
+
+  &--value {
+    height: 120px;
+    width: 70%;
+    border: 2px solid black;
+    border-radius: 20px;
+    position: absolute;
+    top: 60px;
+    left: 47px;
+  }
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

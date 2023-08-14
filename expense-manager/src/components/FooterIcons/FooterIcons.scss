@@ -1,0 +1,16 @@
+.footerIcons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footerIcons > div {
+  flex: 1;
+  text-align: center;
+}
+
+.footerIcons img {
+  padding: 17px;
+  max-width: 28px;
+  max-height: 28px;
+}
