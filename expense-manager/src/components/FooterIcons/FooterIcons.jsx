@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link from React Router
 import "./FooterIcons.scss";
 import Home from "../../assets/images/home.png";
 import Calendar from "../../assets/images/calendar.png";
@@ -9,16 +10,24 @@ const FooterIcons = () => {
   return (
     <div className="footerIcons">
       <div className="footerIconsHome">
-        <img src={Home} alt="home" />
+        <Link to="/">
+          <img src={Home} alt="home" />
+        </Link>
       </div>
       <div className="footerIconsCalendar">
-        <img src={Calendar} alt="calendar" />
+        <Link to="/calendar">
+          <img src={Calendar} alt="calendar" />
+        </Link>
       </div>
       <div className="footerIconsSpending">
-        <img src={Spending} alt="spending" />
+        <Link to="/spending">
+          <img src={Spending} alt="spending" />
+        </Link>
       </div>
       <div className="footerIconsProfile">
-        <img src={Profile} alt="" />
+        <Link to="/profile">
+          <img src={Profile} alt="profile" />
+        </Link>
       </div>
     </div>
   );

@@ -8,6 +8,7 @@ import Transactions from "../../components/Transactions/Transactions";
 export const HomePage = () => {
   return (
     <div className="homepage">
+      <h1>HomePage</h1>
       <Balance />
       <Analytics />
       <Transactions />

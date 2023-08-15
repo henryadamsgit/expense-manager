@@ -1,0 +1,36 @@
+.timeBar {
+  width: 80%;
+  height: 25px;
+  border: 2px dotted purple;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  margin: 10px;
+  left: 11px;
+  top: 100px;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+}
+
+.timeBar--text {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  font-size: 18px;
+  font-weight: normal;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeBar--text.selected {
+  background-color: white;
+  border: 1px dotted black;
+  border-radius: 10px;
+  width: 80px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+}

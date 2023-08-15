@@ -1,0 +1,32 @@
+.spendingBar {
+  width: 78%;
+  height: 20px;
+  border: 2px dotted green;
+  border-radius: 20px;
+  margin: 2px;
+  position: absolute;
+  padding: 20px;
+  bottom: 362px;
+  left: 17px;
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+  &--a {
+    border: 1px dotted orange;
+    border-radius: 10px;
+    width: 45%;
+    height: 30px;
+    left: 0;
+    padding: 10px;
+  }
+
+  &--b {
+    border: 1px dotted pink;
+    border-radius: 10px;
+    width: 45%;
+    height: 30px;
+    left: 0;
+    padding: 10px;
+  }
+}

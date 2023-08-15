@@ -1,4 +1,11 @@
 .all--text {
   display: inline-flex;
   margin-left: 100px;
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
