@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -9,7 +8,7 @@ import java.util.List;
 @Service
 public class ExpenseManagerService {
 
-    @Autowired
+
     ExpenseManagerRepository repository;
 
     public List<Expenses> getAllExpenses() {
@@ -29,7 +28,6 @@ public class ExpenseManagerService {
     }
 
     public Expenses addExpense(Expenses expense) {
-        // Add your logic to save the expense in the repository
         return repository.save(expense);
     }
 
@@ -57,7 +55,6 @@ public class ExpenseManagerService {
             existingExpense.setTransaction_date((expense.getTransaction_date()));
             return repository.save(existingExpense);
         } else {
-            // Handle the case where the expense doesn't exist
             return null;
         }
     }

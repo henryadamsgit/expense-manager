@@ -1,6 +1,7 @@
 package com.example.demo;
 
-import jakarta.persistence.Entity;
+
+import org.hibernate.annotations.Entity;
 
 @Entity
 public class ExpenseManager {
