@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -8,11 +9,23 @@ import java.util.List;
 @Service
 public class ExpenseManagerService {
 
+    private final ExpenseManagerRepository repository;
+    @Autowired
+    public ExpenseManagerService(ExpenseManagerRepository repository) {
+        this.repository = repository;
+    }
 
-    ExpenseManagerRepository repository;
 
     public List<Expenses> getAllExpenses() {
         return repository.getAllExpenses();
+    }
+
+    public long calculateTotalBalance(List<Expenses> transactions) {
+        long totalBalance = 0;
+        for (Expenses transaction : transactions) {
+            totalBalance += transaction.getPrice();
+        }
+        return totalBalance;
     }
 
     public Expenses getExpenseById(long transaction_id) {

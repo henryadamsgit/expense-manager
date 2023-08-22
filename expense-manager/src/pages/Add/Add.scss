@@ -1,0 +1,59 @@
+.add {
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #f34141;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+}
+
+.add h2 {
+  color: #f34141;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.add label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.add input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.add button {
+  background-color: #f34141;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add button:hover {
+  background-color: #d40e0e;
+}
+
+.go-back-button {
+  background-color: #f34141;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.go-back-button:hover {
+  background-color: #d40e0e;
+}

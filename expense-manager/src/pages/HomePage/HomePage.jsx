@@ -4,15 +4,19 @@ import Footer from "../../components/Footer/Footer";
 import Balance from "../../components/Balance/Balance";
 import Analytics from "../../components/Analytics/Analytics";
 import Transactions from "../../components/Transactions/Transactions";
+import Top from "../../components/Top/Top";
 
-export const HomePage = () => {
+const HomePage = ({ expenses }) => {
   return (
     <div className="homepage">
-      <h1>HomePage</h1>
-      <Balance />
-      <Analytics />
-      <Transactions />
+      <h1 className="title">HomePage</h1>
+      <Top />
+      <Balance expenses={expenses} />
+      {/* <Analytics expenses={expenses} /> */}
+      <Transactions expenses={expenses} />
       <Footer />
     </div>
   );
 };
+
+export default HomePage;

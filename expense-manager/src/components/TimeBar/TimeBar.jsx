@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import "./TimeBar.scss";
 
-const TimeBar = ({ onDataUpdate }) => {
+const TimeBar = () => {
   const [selectedTimePeriod, setSelectedTimePeriod] = useState("daily");
 
   const handleTimePeriodChange = (timePeriod) => {
     setSelectedTimePeriod(timePeriod);
-    onDataUpdate(timePeriod);
   };
 
   return (

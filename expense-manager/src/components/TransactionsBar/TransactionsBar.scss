@@ -1,23 +1,28 @@
 .transBar {
-  width: 78%;
-  height: 20px;
-  border: 2px dotted green;
+  position: relative;
+  width: 90%;
+  height: 40px;
+  border: 2px solid black;
+  background-color: black;
   border-radius: 20px;
-  margin: 2px;
-  position: absolute;
-  padding: 20px;
-  bottom: 75px;
-  left: 14px;
+  margin: 5px;
+  padding: 10px;
+}
 
-  &--b {
-    width: 78%;
-    height: 20px;
-    border: 2px dotted green;
-    border-radius: 20px;
-    margin: 2px;
-    position: absolute;
-    padding: 20px;
-    bottom: 5px;
-    left: 14px;
-  }
+.company {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #f34141;
+  font-weight: 500;
+}
+
+.price {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #f34141;
+  font-weight: 500;
 }

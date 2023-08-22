@@ -1,11 +1,9 @@
 package com.example.demo;
 
-
-import org.hibernate.annotations.Entity;
-import org.springframework.data.annotation.Id;
-
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Expenses {
@@ -25,6 +23,8 @@ public class Expenses {
         this.balance = balance;
         this.transaction_date = transaction_date;
     }
+
+    public Expenses(){}
 
     public long getTransaction_id() {
         return transaction_id;
