@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Add.scss";
 
-const Add = ({ expenses }) => {
+const Add = ({ addExpense }) => {
   const navigate = useNavigate();
 
   const [transaction, setTransaction] = useState({
@@ -34,10 +34,12 @@ const Add = ({ expenses }) => {
       });
 
       if (response.ok) {
-        console.log("Transaction submitted:", transaction);
+        console.log("Transaction added:", transaction);
         navigate("/");
+        addExpense(transaction);
       } else {
         console.error("Failed to submit transaction");
+        console.log(response);
       }
     } catch (error) {
       console.error("An error occurred:", error);
@@ -57,7 +59,7 @@ const Add = ({ expenses }) => {
           type="text"
           id="transaction_id"
           name="transaction_id"
-          value={expenses.transaction_id}
+          value={transaction.transaction_id}
           onChange={handleChange}
         />
 
@@ -66,7 +68,7 @@ const Add = ({ expenses }) => {
           type="text"
           id="price"
           name="price"
-          value={expenses.price}
+          value={transaction.price}
           onChange={handleChange}
         />
 
@@ -75,7 +77,7 @@ const Add = ({ expenses }) => {
           type="text"
           id="company"
           name="company"
-          value={expenses.company}
+          value={transaction.company}
           onChange={handleChange}
         />
 
@@ -84,7 +86,7 @@ const Add = ({ expenses }) => {
           type="text"
           id="balance"
           name="balance"
-          value={expenses.balance}
+          value={transaction.balance}
           onChange={handleChange}
         />
 
@@ -93,7 +95,7 @@ const Add = ({ expenses }) => {
           type="text"
           id="transaction_date"
           name="transaction_date"
-          value={expenses.transaction_date}
+          value={transaction.transaction_date}
           onChange={handleChange}
         />
 

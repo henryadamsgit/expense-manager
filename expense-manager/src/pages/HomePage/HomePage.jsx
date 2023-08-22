@@ -6,13 +6,13 @@ import Analytics from "../../components/Analytics/Analytics";
 import Transactions from "../../components/Transactions/Transactions";
 import Top from "../../components/Top/Top";
 
-const HomePage = ({ expenses }) => {
+const HomePage = ({ expenses, barData }) => {
   return (
     <div className="homepage">
       <h1 className="title">HomePage</h1>
       <Top />
       <Balance expenses={expenses} />
-      {/* <Analytics expenses={expenses} /> */}
+      <Analytics expenses={expenses} barData={barData} />
       <Transactions expenses={expenses} />
       <Footer />
     </div>

@@ -34,4 +34,5 @@ public interface ExpenseManagerRepository extends JpaRepository<Expenses, Long> 
     @Query(value = "SELECT * FROM user_transactions WHERE YEAR(date) = YEAR(CURRENT_DATE)", nativeQuery = true)
     List<Expenses> getYearly();
 
+    Expenses save(Expenses expense);
 }

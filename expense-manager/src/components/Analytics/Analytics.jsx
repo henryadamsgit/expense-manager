@@ -35,3 +35,18 @@
 // };
 
 // export default Analytics;
+
+import React from "react";
+import "./Analytics.scss";
+import BarChart from "../BarChart/BarChart";
+
+const Analytics = ({ barData }) => {
+  return (
+    <div className="analytics">
+      Analytics
+      <BarChart barData={barData} />
+    </div>
+  );
+};
+
+export default Analytics;

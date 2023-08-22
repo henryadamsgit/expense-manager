@@ -7,6 +7,19 @@ import Add from "./pages/Add/Add";
 
 const App = () => {
   const [expenses, setExpenses] = useState([]);
+  const [barData, setBarData] = useState({
+    labels: [],
+    datasets: [
+      {
+        label: "Transaction Price",
+        data: [],
+      },
+    ],
+  });
+
+  const addExpense = (newExpense) => {
+    setExpenses([...expenses, newExpense]);
+  };
 
   useEffect(() => {
     const fetchExpenses = async () => {
@@ -16,6 +29,18 @@ const App = () => {
         if (response.ok) {
           const data = await response.json();
           setExpenses(data);
+
+          const labels = data.map((expense) => expense.transaction_date);
+          const dataValues = data.map((expense) => expense.price);
+          setBarData({
+            labels: labels,
+            datasets: [
+              {
+                label: "Transaction Price",
+                data: dataValues,
+              },
+            ],
+          });
         } else {
           console.error("Failed to fetch expenses");
         }
@@ -30,9 +55,18 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage expenses={expenses} />} />
-        <Route path="/spending" element={<Spending expenses={expenses} />} />
-        <Route path="/add" element={<Add expenses={expenses} />} />
+        <Route
+          path="/"
+          element={<HomePage expenses={expenses} barData={barData} />}
+        />
+        <Route
+          path="/spending"
+          element={<Spending expenses={expenses} barData={barData} />}
+        />
+        <Route
+          path="/add"
+          element={<Add expenses={expenses} addExpense={addExpense} />}
+        />
       </Routes>
     </Router>
   );

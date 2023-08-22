@@ -7,13 +7,13 @@ import AnalyticsSpending from "../../components/AnalyticsSpending/AnalyticsSpend
 import SpendingBar from "../../components/SpendingBar/SpendingBar";
 import Top from "../../components/Top/Top";
 
-const Spending = ({ expenses }) => {
+const Spending = ({ expenses, barData }) => {
   return (
     <div className="homepage">
       <h1 className="title">Spending</h1>
       <Top />
       <TimeBar />
-      <AnalyticsSpending />
+      <AnalyticsSpending expenses={expenses} barData={barData} />
       {/* <SpendingBar /> */}
       <Transactions expenses={expenses} />
       <Footer />

@@ -16,9 +16,8 @@ public class ExpenseManagerController {
 
     // CREATE
     @PostMapping("/new")
-    public ResponseEntity<Void> addExpenses(@RequestBody Expenses expense) {
-        service.addExpense(expense);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+    public ResponseEntity<Expenses> addExpenses(@RequestBody Expenses expense) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.addExpense(expense));
     }
 
     // READ

@@ -2,16 +2,16 @@ import React from "react";
 import "./Balance.scss";
 
 const Balance = ({ expenses }) => {
-  const totalBalance = expenses.reduce(
-    (total, expenses) => total + expenses.price,
+  const totalExpenses = expenses.reduce(
+    (total, expense) => total + parseFloat(expense.price),
     0
   );
 
   return (
     <div className="balance">
-      <p className="text">Your Current Balance:</p>
+      <p className="text">Total Spent:</p>
       <div className="balance--value">
-        <h1 className="text">£{totalBalance}</h1>
+        <h1 className="text">£{totalExpenses.toFixed(2)}</h1>
       </div>
     </div>
   );
